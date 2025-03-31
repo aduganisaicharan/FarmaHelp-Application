@@ -60,9 +60,11 @@ app.post("/predict", (req, res) => {
   pythonProcess.stderr.on("data", (data) => {
     console.error(`Error from Python script: ${data}`);
     if (!res.headersSent) {
-      res.status(500).json({ error: "Model execution failed" });
+      res.status(500).json({ error: data.toString() });
     }
-  });
+    pythonProcess.kill();  // Ensure process is killed after an error
+  });  
+
 });
 
 
