@@ -5,8 +5,15 @@ import pandas as pd
 import numpy as np
 
 # Load trained model
-with open("C:/pythonn/lr_model.pkl", "rb") as file:
+# with open("C:/pythonn/lr_model.pkl", "rb") as file:
+#     model = pickle.load(file)
+
+import os
+model_path = os.path.join(os.path.dirname(__file__), "lr_model.pkl")
+
+with open(model_path, "rb") as file:
     model = pickle.load(file)
+
 
 # Extract correct feature names from the model
 expected_columns = model.feature_names_in_  # Get correct column names
