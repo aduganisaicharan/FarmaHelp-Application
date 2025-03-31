@@ -1,4 +1,4 @@
-import sys
+import sys 
 import json
 import pickle
 import pandas as pd
@@ -9,7 +9,7 @@ import numpy as np
 #     model = pickle.load(file)
 
 import os
-model_path = os.path.join(os.path.dirname(__file__), "lr_model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "lr_model.pkl") 
 
 with open(model_path, "rb") as file:
     model = pickle.load(file)
@@ -57,7 +57,7 @@ def predict(input_data):
 if __name__ == "__main__":
 
     try:
-        input_json = sys.stdin.read().strip()
+        input_json = sys.stdin.read().strip() 
         input_data = json.loads(input_json)
 
         result = predict(input_data)
