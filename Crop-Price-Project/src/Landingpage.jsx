@@ -28,7 +28,7 @@ export default function LandingPage() {
         {images.map((img, index) => (
           <SwiperSlide key={index}>
             <img 
-              src={`../public/assets/${img}`}
+              src={`/assets/${img}`}
               alt="crop"
               className="w-full h-full object-cover"
             />
