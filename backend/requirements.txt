@@ -1,6 +1,4 @@
 pandas
 numpy
 scikit-learn
-opencv-python
-pickle5
-flask
+
